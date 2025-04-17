@@ -24,8 +24,8 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       react-router:
-        specifier: 0.0.0-experimental-36a5255b6
-        version: 0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.0.0-experimental-0fd8a0272
+        version: 0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: ^19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -62,7 +62,7 @@ importers:
         version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
       '@react-router/dev':
         specifier: 0.0.0-experimental-36a5255b6
-        version: 0.0.0-experimental-36a5255b6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
+        version: 0.0.0-experimental-36a5255b6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.2
         version: 5.2.2(prettier@3.5.3)
@@ -2157,8 +2157,8 @@ packages:
     resolution: {integrity: sha512-FPvF2XxTSikpJxcr+bHut2H4gJ17+18Uy20D5/F+SKzFap62R3cM5wH6b8WN3LyGSYeQilLEcJcR1fjBSI2S1A==}
     engines: {node: '>=0.10.0'}
 
-  react-router@0.0.0-experimental-36a5255b6:
-    resolution: {integrity: sha512-rk3HjOH8eI4U++rrapOyXkGtpXXyhUFtcKS3n1/RM0ktYvW06YHfzS5eEi1jS7StyeUbMiT/eWxTZDCsAAbpfA==}
+  react-router@0.0.0-experimental-0fd8a0272:
+    resolution: {integrity: sha512-l8n8GC4BcKoY1oTbovpA0DK6NtoSKJhMVDCURH3dHo/5AUtrYIzo8msbmdfV6l0/PWyGkuGVy+06G25EPEIjTg==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3597,7 +3597,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@react-router/dev@0.0.0-experimental-36a5255b6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))':
+  '@react-router/dev@0.0.0-experimental-36a5255b6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -3608,7 +3608,7 @@ snapshots:
       '@babel/traverse': 7.27.0
       '@babel/types': 7.27.0
       '@npmcli/package-json': 4.0.1
-      '@react-router/node': 0.0.0-experimental-36a5255b6(react-router@0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@react-router/node': 0.0.0-experimental-36a5255b6(react-router@0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       arg: 5.0.2
       babel-dead-code-elimination: 1.0.10
       chokidar: 4.0.3
@@ -3622,7 +3622,7 @@ snapshots:
       picocolors: 1.1.1
       prettier: 2.8.8
       react-refresh: 0.14.2
-      react-router: 0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       semver: 7.7.1
       set-cookie-parser: 2.7.1
       valibot: 0.41.0
@@ -3644,10 +3644,10 @@ snapshots:
       - tsx
       - yaml
 
-  '@react-router/node@0.0.0-experimental-36a5255b6(react-router@0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@react-router/node@0.0.0-experimental-36a5255b6(react-router@0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@mjackson/node-fetch-server': 0.2.0
-      react-router: 0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       source-map-support: 0.5.21
       stream-slice: 0.1.2
       undici: 6.21.2
@@ -4748,7 +4748,7 @@ snapshots:
 
   react-refresh@0.16.0: {}
 
-  react-router@0.0.0-experimental-36a5255b6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@0.0.0-experimental-0fd8a0272(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@types/cookie': 0.6.0
       cookie: 1.0.2
