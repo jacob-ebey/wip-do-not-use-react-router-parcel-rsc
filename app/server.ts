@@ -1,6 +1,6 @@
 import express from "express";
 
-import reactRouter from "./entry.server.tsx";
+import reactRouter from "./entry.ssr.tsx";
 
 const app = express();
 app.use(express.static("public"));

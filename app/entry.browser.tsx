@@ -1,13 +1,13 @@
 "use client-entry";
 
-import { startTransition, StrictMode } from "react";
+import * as React from "react";
 import { hydrateRoot } from "react-dom/client";
 import {
   createCallServer,
   getServerStream,
-  ServerBrowserRouter,
+  RSCHydratedRouter,
 } from "react-router";
-import type { ServerPayload } from "react-router/server";
+import type { ServerPayload } from "react-router/rsc";
 import {
   createFromReadableStream,
   encodeReply,
@@ -24,15 +24,17 @@ setServerCallback(callServer);
 
 createFromReadableStream(getServerStream(), { assets: "manifest" }).then(
   (payload: ServerPayload) => {
-    startTransition(() => {
+    React.startTransition(() => {
       hydrateRoot(
         document,
-        <StrictMode>
-          <ServerBrowserRouter
-            decode={createFromReadableStream}
-            payload={payload}
-          />
-        </StrictMode>
+        React.createElement(
+          React.StrictMode,
+          null,
+          React.createElement(RSCHydratedRouter, {
+            decode: (body) => createFromReadableStream(body),
+            payload,
+          })
+        )
       );
     });
   }

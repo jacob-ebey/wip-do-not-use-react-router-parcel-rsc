@@ -10,12 +10,12 @@ import {
 import {
   type DecodeCallServerFunction,
   type DecodeFormActionFunction,
-  matchServerRequest,
-} from "react-router/server";
+  matchRSCServerRequest,
+} from "react-router/rsc";
 
 import conventionalRoutes from "virtual:react-router/routes";
 
-import "./entry.client.tsx";
+import "./entry.browser.tsx";
 
 const decodeCallServer: DecodeCallServerFunction = async (actionId, reply) => {
   const args = await decodeReply(reply);
@@ -28,7 +28,7 @@ const decodeFormAction: DecodeFormActionFunction = async (formData) => {
 };
 
 export async function callServer(request: Request) {
-  const match = await matchServerRequest({
+  const match = await matchRSCServerRequest({
     decodeCallServer,
     decodeFormAction,
     request,
