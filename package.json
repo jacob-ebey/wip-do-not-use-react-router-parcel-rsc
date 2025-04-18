@@ -25,11 +25,11 @@
     "express": "^4.21.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "0.0.0-experimental-3b3f4b74e",
+    "react-router": "0.0.0-experimental-1a5899f7e",
     "react-server-dom-parcel": "^19.1.0"
   },
   "devDependencies": {
-    "@react-router/dev": "0.0.0-experimental-3b3f4b74e",
+    "@react-router/dev": "0.0.0-experimental-1a5899f7e",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/express": "^4",
     "@types/node": "^22.10.5",
