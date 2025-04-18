@@ -20,6 +20,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li>
                 <Link to="/about">About</Link>
               </li>
+              <li>
+                <Link to="/server-first">Server First</Link>
+              </li>
             </ul>
           </nav>
         </header>

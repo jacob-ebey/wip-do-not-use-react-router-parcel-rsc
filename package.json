@@ -8,6 +8,7 @@
       "context": "react-server",
       "scopeHoist": false,
       "includeNodeModules": {
+        "@mjackson/node-fetch-server": true,
         "express": false
       }
     }
@@ -19,6 +20,7 @@
     "start": "node ./dist/server/server.js"
   },
   "dependencies": {
+    "@mjackson/node-fetch-server": "^0.6.1",
     "@parcel/runtime-rsc": "^2.14.4",
     "express": "^4.21.2",
     "react": "^19.1.0",

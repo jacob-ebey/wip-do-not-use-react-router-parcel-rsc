@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@mjackson/node-fetch-server':
+        specifier: ^0.6.1
+        version: 0.6.1
       '@parcel/runtime-rsc':
         specifier: ^2.14.4
         version: 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
