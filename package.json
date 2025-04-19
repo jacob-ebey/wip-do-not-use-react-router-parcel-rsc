@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "parcel build",
+    "build": "parcel build && node prerender.mjs",
     "clean": "rm -rf dist node_modules .parcel-cache .react-router .react-router-parcel",
     "dev": "parcel",
     "start": "node ./dist/server/server.js"
