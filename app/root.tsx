@@ -2,6 +2,15 @@ import { Link, Outlet } from "react-router";
 
 import "./styles.css";
 
+export const unstable_middleware = [
+  async ({}, next) => {
+    console.log("start");
+    let res = await next();
+    console.log("end");
+    return res;
+  },
+];
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
