@@ -1,15 +1,23 @@
-import { Link, Outlet } from "react-router";
+import { provide, pull } from "@ryanflorence/async-provider";
+import { Link, Outlet, unstable_MiddlewareFunction } from "react-router";
 
 import "./styles.css";
+import { stringContext } from "./context";
 
-export const unstable_middleware = [
+export const unstable_middleware: unstable_MiddlewareFunction<Response>[] = [
   async ({}, next) => {
-    console.log("start");
-    let res = await next();
-    console.log("end");
+    console.log("start root middleware");
+    let res = await provide(new Map([[stringContext, "Yoooooooooo"]]), next);
+    console.log("end root middleware");
     return res;
   },
 ];
+
+export function loader() {
+  return {
+    message: pull(stringContext),
+  };
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -38,9 +46,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function ServerComponent() {
+export function ServerComponent({
+  loaderData,
+}: {
+  loaderData: ReturnType<typeof loader>;
+}) {
   return (
     <div id="root">
+      <h1>Root Loader Data: {loaderData.message}</h1>
       <Outlet />
     </div>
   );

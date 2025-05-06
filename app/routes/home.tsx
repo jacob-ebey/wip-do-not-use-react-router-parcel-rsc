@@ -1,9 +1,11 @@
+import { pull } from "@ryanflorence/async-provider";
 import { Route } from "./+types/home";
 
 import { log } from "./home.actions";
+import { stringContext } from "../context";
 
 export function loader({}: Route.LoaderArgs) {
-  return "hello, world";
+  return pull(stringContext);
 }
 
 export function ServerComponent({ loaderData }: Route.ComponentProps) {
