@@ -19,7 +19,6 @@
     "start": "node ./dist/server/server.js"
   },
   "dependencies": {
-    "@mjackson/node-fetch-server": "^0.6.1",
     "@parcel/runtime-rsc": "^2.14.4",
     "@ryanflorence/async-provider": "^0.0.1",
     "express": "^4.21.2",
