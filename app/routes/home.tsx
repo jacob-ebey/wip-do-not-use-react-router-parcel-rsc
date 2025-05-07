@@ -5,6 +5,7 @@ import { log } from "./home.actions";
 import { stringContext } from "../context";
 
 export function loader({}: Route.LoaderArgs) {
+  // Set in root middleware
   return pull(stringContext);
 }
 
