@@ -1,0 +1,55 @@
+diff --git a/dist/development/rsc-export.mjs b/dist/development/rsc-export.mjs
+index eb54f21c23ae40c13d34a875f3d1845bd87b3da9..3fb3419c255250d55ef3321b454169ee35da0eef 100644
+--- a/dist/development/rsc-export.mjs
++++ b/dist/development/rsc-export.mjs
+@@ -1431,15 +1431,41 @@ async function runMiddlewarePipeline(args, propagateResult, handler, errorHandle
+     handlerResult: void 0
+   };
+   try {
+-    let tuples = [];
+-    for (let m of matches) {
+-      if (m.route.unstable_middleware) {
+-        for (let fn of m.route.unstable_middleware) {
+-          let tuple = [m.route.id, fn];
+-          tuples.push(tuple);
+-        }
+-      }
+-    }
++    /**
++     * This is the code that causes the error.  A match here is of the format:
++     *
++     * match = {
++     *   route: {
++     *     id: string,
++     *     unstable_middleware?: Function[]
++     *   }
++     * }
++     *
++     * Something about the flatMap/map messes up the internal Proxy parcel uses
++     * and errors with:
++     *
++     *   TypeError: 'get' on proxy: property 'prototype' is a read-only and
++     *   non-configurable data property on the proxy target but the proxy did
++     *   not return its actual value (expected '[object Array]' but got
++     *   '[object Array]')
++     */
++    let tuples = matches.flatMap((m) =>
++      m.route.unstable_middleware
++        ? m.route.unstable_middleware.map((fn) => [m.route.id, fn])
++        : []
++    );
++
++    // Switching to a simpler non-flatMap/map approach fixes the issue:
++    // let tuples = [];
++    // for (let m of matches) {
++    //   if (m.route.unstable_middleware) {
++    //     for (let fn of m.route.unstable_middleware) {
++    //       let tuple = [m.route.id, fn];
++    //       tuples.push(tuple);
++    //     }
++    //   }
++    // }
++
+     let result = await callRouteMiddleware(
+       { request, params, context },
+       tuples,

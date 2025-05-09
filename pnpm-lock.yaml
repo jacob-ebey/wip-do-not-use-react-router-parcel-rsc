@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  react-router:
+    hash: vmzfav6uyvzcvscu46y5sllpgu
+    path: patches/react-router.patch
+
 importers:
 
   .:
@@ -25,14 +30,14 @@ importers:
         version: 19.1.0(react@19.1.0)
       react-router:
         specifier: 0.0.0-experimental-e988dc602
-        version: 0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel:
         specifier: ^19.1.0
         version: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@react-router/dev':
         specifier: 0.0.0-experimental-e988dc602
-        version: 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
+        version: 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
       '@tailwindcss/postcss':
         specifier: ^4.1.4
         version: 4.1.4
@@ -59,7 +64,7 @@ importers:
         version: 2.14.4(@swc/helpers@0.5.15)(postcss@8.5.3)
       parcel-config-react-router-experimental:
         specifier: ^1.0.10
-        version: 1.0.10(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(@swc/helpers@0.5.15)(postcss@8.5.3)(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        version: 1.0.10(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(@swc/helpers@0.5.15)(postcss@8.5.3)(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       postcss:
         specifier: ^8.2.1
         version: 8.5.3
@@ -3793,7 +3798,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))':
+  '@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -3804,7 +3809,7 @@ snapshots:
       '@babel/traverse': 7.27.0
       '@babel/types': 7.27.0
       '@npmcli/package-json': 4.0.1
-      '@react-router/node': 0.0.0-experimental-e988dc602(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@react-router/node': 0.0.0-experimental-e988dc602(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       arg: 5.0.2
       babel-dead-code-elimination: 1.0.10
       chokidar: 4.0.3
@@ -3818,7 +3823,7 @@ snapshots:
       picocolors: 1.1.1
       prettier: 2.8.8
       react-refresh: 0.14.2
-      react-router: 0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       semver: 7.7.1
       set-cookie-parser: 2.7.1
       valibot: 0.41.0
@@ -3840,10 +3845,10 @@ snapshots:
       - tsx
       - yaml
 
-  '@react-router/node@0.0.0-experimental-e988dc602(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@react-router/node@0.0.0-experimental-e988dc602(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@mjackson/node-fetch-server': 0.2.0
-      react-router: 0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       source-map-support: 0.5.21
       stream-slice: 0.1.2
       undici: 6.21.2
@@ -4992,11 +4997,11 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  parcel-config-react-router-experimental@1.0.10(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(@swc/helpers@0.5.15)(postcss@8.5.3)(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  parcel-config-react-router-experimental@1.0.10(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(@swc/helpers@0.5.15)(postcss@8.5.3)(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
       '@parcel/config-default': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(postcss@8.5.3)
-      parcel-resolver-react-router-experimental: 1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
-      parcel-resolver-react-router-typegen-experimental: 1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))
+      parcel-resolver-react-router-experimental: 1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+      parcel-resolver-react-router-typegen-experimental: 1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))
     transitivePeerDependencies:
       - '@parcel/core'
       - '@react-router/dev'
@@ -5017,7 +5022,7 @@ snapshots:
       - typescript
       - uncss
 
-  parcel-resolver-react-router-experimental@1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  parcel-resolver-react-router-experimental@1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)))(react-dom@19.1.0(react@19.1.0))(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-server-dom-parcel@19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -5025,7 +5030,7 @@ snapshots:
       '@babel/traverse': 7.27.0
       '@mjackson/node-fetch-server': 0.6.1
       '@parcel/plugin': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
-      '@react-router/dev': 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
+      '@react-router/dev': 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
       '@types/babel__core': 7.20.5
       '@types/babel__generator': 7.27.0
       '@types/babel__traverse': 7.20.7
@@ -5036,17 +5041,17 @@ snapshots:
       oxc-transform: 0.64.0
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      react-router: 0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react-router: 0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-server-dom-parcel: 19.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
       - supports-color
 
-  parcel-resolver-react-router-typegen-experimental@1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))):
+  parcel-resolver-react-router-typegen-experimental@1.0.9(@parcel/core@2.14.4(@swc/helpers@0.5.15))(@react-router/dev@0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))):
     dependencies:
       '@parcel/plugin': 2.14.4(@parcel/core@2.14.4(@swc/helpers@0.5.15))
-      '@react-router/dev': 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
+      '@react-router/dev': 0.0.0-experimental-e988dc602(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(vite@6.3.0(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3))
     transitivePeerDependencies:
       - '@parcel/core'
       - napi-wasm
@@ -5194,7 +5199,7 @@ snapshots:
 
   react-refresh@0.16.0: {}
 
-  react-router@0.0.0-experimental-e988dc602(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-router@0.0.0-experimental-e988dc602(patch_hash=vmzfav6uyvzcvscu46y5sllpgu)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       cookie: 1.0.2
       react: 19.1.0

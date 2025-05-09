@@ -41,5 +41,10 @@
     "postcss": "^8.2.1",
     "prettier": "^3.5.3",
     "tailwindcss": "^4.1.4"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "react-router": "patches/react-router.patch"
+    }
   }
 }
